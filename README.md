@@ -111,7 +111,12 @@ Once both the application and test project are set up:
    ```bash
    npx playwright test
    ```
-
+   
+4. **Execute the tests of a specific module (cart module example)**:
+   ```bash
+   npx playwright test tests/cart
+   ```
+   
 ## Troubleshooting
 
 - **Database Connection Issues**: Verify the database credentials in the `.env` file match your Xampp MySQL settings
