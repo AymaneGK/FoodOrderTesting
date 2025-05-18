@@ -9,6 +9,10 @@ This README provides instructions for setting up both the application under test
 - [Running Tests](#running-tests)
 - [Troubleshooting](#troubleshooting)
 
+> **Important**: This testing setup requires cloning TWO separate repositories:
+> 1. The application under test: `https://github.com/jasonchn18/laravel-food-ordering-web-app.git`
+> 2. The test project: `https://github.com/AymaneGK/FoodOrderTesting.git`
+
 ## Prerequisites
 
 To run the tests on this application, you'll need:
@@ -72,11 +76,14 @@ Follow these steps to set up the application under test:
 
 After setting up the application, follow these steps to set up the test project:
 
-1. **Clone the Playwright test project repository** or download it from the provided drive link
+1. **Clone the Playwright test project repository**:
+   ```bash
+   git clone https://github.com/AymaneGK/FoodOrderTesting.git
+   ```
 
 2. **Navigate into the test project directory**:
    ```bash
-   cd path/to/test-project
+   cd FoodOrderTesting
    ```
 
 3. **Install test project dependencies**:
@@ -95,7 +102,12 @@ Once both the application and test project are set up:
 
 1. **Ensure the Laravel application is running** (`php artisan serve`)
 
-2. **Execute the tests**:
+2. **In a separate terminal window**, navigate to your test project directory:
+   ```bash
+   cd FoodOrderTesting
+   ```
+
+3. **Execute the tests**:
    ```bash
    npx playwright test
    ```
@@ -109,4 +121,4 @@ Once both the application and test project are set up:
 
 ---
 
-For any additional issues or questions, please refer to the project test plan
+For any additional issues or questions, please refer to the project documentation or contact the test project maintainer.
