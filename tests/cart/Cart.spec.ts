@@ -11,6 +11,8 @@ test.describe('Product Cart Flow', () => {
   let cartPage: CartPage;
 
   test.beforeEach(async ({ page }) => {
+    await page.context().clearCookies();
+    await page.context().clearPermissions();
     loginPage = new LoginPage(page);
     dashboardPage = new DashboardPage(page);
     detailPage = new DetailPage(page);
